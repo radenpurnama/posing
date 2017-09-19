@@ -1,0 +1,22 @@
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()" class="ui-g">
+  <p-panel header="Add Project" class="ui-g-12">
+
+      <div class="ui-g">
+          <label for="projectId" class="ui-g-12 ui-md-2">Item Name</label>
+          <input type="text" pInputText formControlName="itemName" placeholder="Item Name" >     
+      </div>
+      <div class="ui-g">
+        <label for="projectId" class="ui-g-12 ui-md-2">Item Kode</label>
+        <input type="text" pInputText formControlName="itemKode" placeholder="Item Kode" >     
+      </div>
+      <div class="ui-g">
+        <label for="projectId" class="ui-g-12 ui-md-2">Item Nomor</label>
+        <input type="text" pInputText formControlName="itemNomor" placeholder="Item Nomor" >     
+    </div>
+
+     
+
+      <button pButton type="submit" [disabled]="hasFormErrors()" label="Save" icon="fa-floppy-o"></button>
+
+  </p-panel>
+</form>
